@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login-Register Page</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/cbf7b3ff12.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="form-container">
+          <h1 id="title">Register</h1>
+          <div class="input-container">
+            <div class="input-field" id="nameField">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" placeholder="Name" />
+            </div>
+
+            <div class="input-field">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="email" placeholder="Email" />
+            </div>
+
+            <div class="input-field">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" placeholder="Password" id="password" />
+            </div>
+          </div>
+          <div class="btn-field">
+            <button type="button" id="signUpBtn" onclick="signUp()">
+              Register
+            </button>
+            <button
+              onclick="signIn()"
+              type="button"
+              class="disable"
+              id="signInBtn"
+            >
+              Login
+            </button>
+          </div>
+          <script>
+            function signIn() {
+              document.getElementById("nameField").style.maxHeight = "0";
+              document.getElementById("signInBtn").classList.remove("disable");
+              document.getElementById("signUpBtn").classList.add("disable");
+              document.getElementById("title").innerHTML = "Login";
+            }
+            function signUp() {
+              document.getElementById("nameField").style.maxHeight = "65px";
+              document.getElementById("signInBtn").classList.add("disable");
+              document.getElementById("signUpBtn").classList.remove("disable");
+              document.getElementById("title").innerHTML = "Register";
+            }
+          </script>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
