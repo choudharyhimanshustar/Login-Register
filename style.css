@@ -74,3 +74,17 @@ input {
   background-color: rgba(128, 128, 128, 0.212);
   color: rgba(75, 74, 74, 0.514);
 }
+@media (max-width: 400px) {
+  .form-container {
+    width: 90%;
+    margin: 0;
+    margin-left: 0.15rem;
+    right: 0;
+    left: 0;
+  }
+  .container {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+}
